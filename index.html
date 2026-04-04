@@ -22,6 +22,8 @@
               <button class="subtheme-btn" data-theme="global-agent-demand">次主題 2：全球部分企業導入後的 Infrastructure 需求</button>
               <button class="subtheme-btn" data-theme="beneficiary-map">次主題 3：全球部分企業導入下的受惠鏈比較</button>
               <button class="subtheme-btn" data-theme="global-agent-tam">次主題 4：全球個人 / 工作者 Agent TAM 與基礎設施反推</button>
+              <button class="subtheme-btn" data-theme="high-frequency-demand">次主題 5：高頻 / 大量應用場景地圖</button>
+              <button class="subtheme-btn" data-theme="edge-vs-server">次主題 6：哪些需求會留在 edge？哪些回到 server？</button>
             </div>
           </section>
 
@@ -633,6 +635,224 @@
             <div class="section-kicker">Modeling Note</div>
             <h3>使用方式</h3>
             <p class="summary small">這是一個用來推導 infrastructure 壓力的 base case，不是官方精算數字。它的用途是幫你建立量級感：如果 agent adoption 真變成全球性的常態工作流，CPU、memory、storage 的需求很可能先於 GPU training 之外，形成另一條長期的基礎設施需求曲線。</p>
+          </section>
+        </section>
+
+        <section id="high-frequency-demand" class="theme-panel">
+          <header class="hero card">
+            <div>
+              <p class="eyebrow">Subtheme 05</p>
+              <h2>高頻 / 大量應用場景地圖：哪些 Agent 需求最可能把 Infrastructure 推爆？</h2>
+              <p class="muted">除了工作、健康、安全之外，進一步拆哪些應用場景最具高頻、大人口基數、常駐性與資料量，最可能形成 CPU / memory / storage 的長期需求池。</p>
+              <p class="update-tag">最後更新：2026-04-04 19:47 CST</p>
+            </div>
+            <div class="hero-badge">Demand Map</div>
+          </header>
+
+          <section class="card executive-summary">
+            <div class="section-kicker">Executive Summary</div>
+            <h3>核心摘要</h3>
+            <p class="summary">真正會把 agent infrastructure 需求推大的，不一定是最炫的單次任務，而是那些會每天反覆發生、默默常駐、事件密度高、人口基數大的場景。從這個角度看，訊息 / 通訊代理、搜尋 / 資訊過濾、提醒 / 日程協調、客服 / support、自動內容整理、健康 / 安全 / IoT、金融提醒與購物代理，都是潛在的大需求池。</p>
+          </section>
+
+          <section class="grid metrics">
+            <article class="card metric-card">
+              <p class="label">最高頻</p>
+              <p class="value">訊息 / 通訊</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">最大資料量</p>
+              <p class="value">健康 / 安全 / IoT</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">最易普及</p>
+              <p class="value">提醒 / 搜尋 / 生活管理</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">最吃 infra</p>
+              <p class="value">常駐 + 多媒體 + 檢索</p>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Scenario Ranking</div>
+            <h3>高頻 / 大量場景排序</h3>
+            <table>
+              <tr><th>場景</th><th>高頻度</th><th>人口基數</th><th>常駐性</th><th>資料量</th><th>整體潛力</th></tr>
+              <tr><td>訊息 / 通訊代理</td><td>高</td><td>高</td><td>中高</td><td>中</td><td>非常高</td></tr>
+              <tr><td>搜尋 / 資訊過濾 / 個人知識流</td><td>高</td><td>高</td><td>中</td><td>中高</td><td>非常高</td></tr>
+              <tr><td>提醒 / 日程 / 協調</td><td>高</td><td>高</td><td>中高</td><td>中低</td><td>高</td></tr>
+              <tr><td>客服 / support / 代辦</td><td>高</td><td>中高</td><td>高</td><td>中</td><td>高</td></tr>
+              <tr><td>內容整理 / 轉寫 / 翻譯</td><td>中高</td><td>高</td><td>中</td><td>高</td><td>高</td></tr>
+              <tr><td>健康 / 安全 / IoT / 車輛監測</td><td>中高</td><td>高</td><td>非常高</td><td>非常高</td><td>非常高</td></tr>
+              <tr><td>金融 / 帳單 / 風險提醒</td><td>中高</td><td>高</td><td>中高</td><td>中</td><td>中高</td></tr>
+              <tr><td>購物 / 比價 / 消費代理</td><td>中高</td><td>高</td><td>中</td><td>中</td><td>中高</td></tr>
+              <tr><td>教育 / 陪練</td><td>中</td><td>高</td><td>中</td><td>中</td><td>中高</td></tr>
+              <tr><td>娛樂 / companion / 社交</td><td>中高</td><td>高</td><td>中高</td><td>中高</td><td>中高</td></tr>
+            </table>
+          </section>
+
+          <section class="grid two-col assumptions-grid">
+            <article class="card">
+              <div class="section-kicker">Most Likely to Scale</div>
+              <h3>最容易變成全民化的場景</h3>
+              <ul class="bullets">
+                <li>主 assistant + 訊息整理，是最像作業系統層級入口的 agent 應用。</li>
+                <li>提醒 / 日程 / 生活管理，因為高頻、低學習門檻，很容易先普及。</li>
+                <li>搜尋 / 資訊整理則最容易變成每天都會碰的知識流入口。</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="section-kicker">Most Infra-Heavy</div>
+              <h3>最吃 infrastructure 的場景</h3>
+              <ul class="bullets">
+                <li>健康 / 安全 / IoT / 車輛監測，因為它們具備常駐、事件密集、時間序列與多媒體資料流特性。</li>
+                <li>內容整理 / 轉寫 / 多媒體處理，也因資料量與處理時間而偏重。</li>
+                <li>搜尋 / retrieval / 個人知識庫，則會持續拉高 CPU、RAM、storage 與 indexing 層需求。</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Infra Matrix</div>
+            <h3>哪些場景最吃 CPU / memory / storage？</h3>
+            <table>
+              <tr><th>場景</th><th>CPU 壓力</th><th>Memory 壓力</th><th>Storage 壓力</th><th>原因</th></tr>
+              <tr><td>訊息 / 通訊代理</td><td>中高</td><td>中</td><td>中</td><td>事件頻率高、摘要 / routing / context 更新頻繁</td></tr>
+              <tr><td>搜尋 / 個人知識流</td><td>高</td><td>高</td><td>高</td><td>檢索、索引、快取、個人化上下文都很吃資源</td></tr>
+              <tr><td>提醒 / 日程 / 協調</td><td>中</td><td>中</td><td>低中</td><td>頻率高但單次負載較小</td></tr>
+              <tr><td>客服 / support</td><td>中高</td><td>中</td><td>中</td><td>併發高、workflow 重、事件密度高</td></tr>
+              <tr><td>內容整理 / 轉寫 / 翻譯</td><td>高</td><td>中高</td><td>高</td><td>多媒體 / 文件處理帶來顯著計算與存儲需求</td></tr>
+              <tr><td>健康 / 安全 / IoT</td><td>中高</td><td>高</td><td>非常高</td><td>常駐監測、歷史資料、時間序列、事件記錄與多媒體片段</td></tr>
+              <tr><td>金融 / 風險提醒</td><td>中</td><td>中高</td><td>中</td><td>即時異常檢測與長期歷史比對</td></tr>
+              <tr><td>購物 / 消費代理</td><td>中</td><td>中</td><td>中</td><td>高人口基數，但多數是低單次負載輪詢型任務</td></tr>
+            </table>
+          </section>
+
+          <section class="card note-card">
+            <div class="section-kicker">Bottom Line</div>
+            <h3>一句結論</h3>
+            <p class="summary small">如果你在找未來最可能把 CPU / memory / storage 需求往上抬的 agent 應用，不要只看最酷的 demo。真正有機會形成巨大需求池的，通常是高頻、高人口基數、常駐、資料會持續累積的那些場景。</p>
+          </section>
+        </section>
+
+        <section id="edge-vs-server" class="theme-panel">
+          <header class="hero card">
+            <div>
+              <p class="eyebrow">Subtheme 06</p>
+              <h2>哪些 Agent 需求會留在 edge？哪些會回到 server / cloud？</h2>
+              <p class="muted">不是所有 agent 需求都會直接變成 server CPU。這個次主題把常見場景拆成 edge-first、hybrid、server-heavy 三類，幫你判斷需求會落在哪一層。</p>
+              <p class="update-tag">最後更新：2026-04-04 20:04 CST</p>
+            </div>
+            <div class="hero-badge">Edge vs Server</div>
+          </header>
+
+          <section class="card executive-summary">
+            <div class="section-kicker">Executive Summary</div>
+            <h3>核心摘要</h3>
+            <p class="summary">真正合理的 agent 基礎設施敘事，不是所有需求都推向 server / cloud，而是需求會重新分配到 edge、local hub、regional node 與 server 之間。凡是低延遲、高隱私、小模型可做、事件觸發型的任務，更容易留在 edge；凡是跨系統、多步驟、高併發、需要大型記憶與長期存檔的工作，則更容易回到 server / cloud。</p>
+          </section>
+
+          <section class="grid metrics">
+            <article class="card metric-card">
+              <p class="label">最適合 edge</p>
+              <p class="value">提醒 / 輕健康 / IoT</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">最典型 hybrid</p>
+              <p class="value">搜尋 / 個人知識流</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">最吃 server</p>
+              <p class="value">企業 workflow / 大規模處理</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">關鍵變化</p>
+              <p class="value">需求重分配</p>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Architecture Split</div>
+            <h3>Edge-first / Hybrid / Server-heavy</h3>
+            <table>
+              <tr><th>類型</th><th>代表場景</th><th>為什麼</th><th>主要受惠硬體</th></tr>
+              <tr><td>Edge-first</td><td>提醒 / 行程、輕健康監測、簡單安全監測、訊息分類、IoT 控制、語音前處理</td><td>低延遲、高隱私、小模型就夠、本地資料即可完成</td><td>手機 SoC、edge CPU / NPU、local memory、local storage</td></tr>
+              <tr><td>Hybrid</td><td>搜尋 / 個人知識流、相簿整理、翻譯、健康長期分析、家庭 hub、個人內容整理</td><td>edge 負責前處理與即時互動，server 負責重檢索、長期記憶、同步與聚合</td><td>edge compute + server CPU + SSD / DRAM</td></tr>
+              <tr><td>Server-heavy</td><td>企業 workflow、跨 SaaS 協作、大型客服、大規模多媒體處理、組織知識庫、長期記憶層</td><td>跨系統、多步驟、高併發、重索引、重檔案處理，不適合只靠裝置端</td><td>server CPU、memory、storage、networking</td></tr>
+            </table>
+          </section>
+
+          <section class="grid two-col assumptions-grid">
+            <article class="card">
+              <div class="section-kicker">Most Likely to Stay on Device</div>
+              <h3>最可能被極小 edge agent 做掉的需求</h3>
+              <ul class="bullets">
+                <li>提醒 / 日程 / 生活管理：因為資料就在手機，邏輯簡單，延遲要求高。</li>
+                <li>輕量健康監測：因為多數只是 anomaly flag，不需要大模型長篇推理。</li>
+                <li>簡單安全監測 / IoT 控制：因為本地事件判斷後再上傳摘要就好，不需要全量上雲。</li>
+                <li>訊息分類 / 輕摘要：很多是小型推理，適合 on-device inference。</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="section-kicker">Still Needs Server / Cloud</div>
+              <h3>仍然會回到 server 的需求</h3>
+              <ul class="bullets">
+                <li>大型搜尋 / 跨平台資訊整合：牽涉大量索引、外部資料源與長鏈條檢索。</li>
+                <li>多步驟企業 workflow：ERP / CRM / 文件 / code / ticket 串接，本質就是 server-side 協作問題。</li>
+                <li>大規模內容處理：長影片、長音訊、文件批次整理、高併發客服，很難完全靠 edge 撐住。</li>
+                <li>長期記憶與組織級 history：edge 可以存一部分，但大型記憶層與歷史資料還是偏 server。</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Server-Side Scenarios</div>
+            <h3>把 edge 分流算進去後，server 還剩多少需求？</h3>
+            <table>
+              <tr><th>情境</th><th>保守</th><th>中性</th><th>積極</th></tr>
+              <tr><td>同時在線 agent</td><td>8,000 萬</td><td>1.2 億</td><td>2 億</td></tr>
+              <tr><td>Edge-first</td><td>40%</td><td>35%</td><td>30%</td></tr>
+              <tr><td>Hybrid</td><td>35%</td><td>40%</td><td>40%</td></tr>
+              <tr><td>Server-heavy</td><td>25%</td><td>25%</td><td>30%</td></tr>
+              <tr><td>Server-side 等價 agent</td><td>約 3,400 萬</td><td>約 6,300 萬</td><td>約 1 億</td></tr>
+              <tr><td>CPU 需求</td><td>約 1,547 萬 vCPU</td><td>約 2,900 萬 vCPU</td><td>約 4,500–5,000 萬 vCPU</td></tr>
+              <tr><td>RAM 需求</td><td>約 95 PB</td><td>約 180 PB</td><td>約 250–300 PB</td></tr>
+              <tr><td>活躍 working storage</td><td>約 248 PB</td><td>約 460 PB</td><td>約 700–800 PB</td></tr>
+              <tr><td>Server fleet 等價</td><td>約 25 萬–40 萬台</td><td>約 40 萬–80 萬台</td><td>約 80 萬–150 萬台</td></tr>
+            </table>
+          </section>
+
+          <section class="grid two-col assumptions-grid">
+            <article class="card">
+              <div class="section-kicker">Workload Split</div>
+              <h3>保守 base case 的 server-side workload 分層</h3>
+              <table>
+                <tr><th>類型</th><th>占比</th><th>等價 agent</th><th>說明</th></tr>
+                <tr><td>CPU-heavy orchestration / retrieval</td><td>60%</td><td>約 2,040 萬個</td><td>工作流控制、search、ranking、tool routing</td></tr>
+                <tr><td>Memory / search-heavy</td><td>25%</td><td>約 850 萬個</td><td>context、cache、index、search-heavy session</td></tr>
+                <tr><td>GPU-assisted / heavy</td><td>15%</td><td>約 510 萬個</td><td>多媒體、rich model、heavy inference backend</td></tr>
+              </table>
+            </article>
+            <article class="card">
+              <div class="section-kicker">Interpretation</div>
+              <h3>怎麼看這三個情境？</h3>
+              <ul class="bullets">
+                <li><strong>保守：</strong> server fleet 約 25 萬–40 萬台，比較像 base case，下限估法。</li>
+                <li><strong>中性：</strong> server fleet 約 40 萬–80 萬台，比較像 agent 普及後的正常擴張。</li>
+                <li><strong>積極：</strong> server fleet 約 80 萬–150 萬台，代表同時在線率更高、edge 分流沒那麼多、回 server 的高價值 workload 更多。</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Investment Interpretation</div>
+            <h3>對投資敘事的意義</h3>
+            <ul class="bullets">
+              <li>不能把所有 agent 需求直接換算成 server CPU 需求，因為一部分會被 edge 吃掉。</li>
+              <li>但需求不是消失，而是分流成 edge compute、local storage、local memory 與 server infrastructure 共同成長。</li>
+              <li>因此更合理的受惠鏈，不只是 server CPU，也包含手機 SoC、edge NPU、local SSD / NAND、以及後端 CPU / memory / storage。</li>
+            </ul>
           </section>
         </section>
 
