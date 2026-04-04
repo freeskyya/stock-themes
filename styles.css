@@ -212,6 +212,12 @@ th, td {
   height: 100%;
   border-radius: inherit;
 }
+.company-fill {
+  background: linear-gradient(90deg, #34d399, #22c55e);
+}
+.employee-fill {
+  background: linear-gradient(90deg, #f59e0b, #f97316);
+}
 .cpu-fill {
   background: linear-gradient(90deg, #60a5fa, #22d3ee);
 }

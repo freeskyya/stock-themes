@@ -254,8 +254,9 @@
             <div class="section-kicker">Executive Summary</div>
             <h3>核心摘要</h3>
             <p class="summary">
-              若未來幾年全球有約 50 萬～150 萬家知識密集型公司逐步導入 agent workflow，則企業新增的 CPU-heavy infrastructure 需求可能達到 100 萬～300 萬台等價設備，
-              GPU / AI node 可能達 10 萬～50 萬台，對應的總體 infrastructure 支出可能落在約 200～500 億美元級別。這條敘事若成立，受惠的不只 GPU，也包含 server CPU、memory、SSD 與 enterprise infrastructure。
+              若未來幾年全球有約 50 萬～150 萬家知識密集型公司逐步導入 agent workflow，對應中重度受影響員工數大約可落在 2,000 萬～6,000 萬人，
+              則企業新增的 CPU-heavy infrastructure 需求可能達到 100 萬～300 萬台等價設備，GPU / AI node 可能達 10 萬～50 萬台，
+              對應的總體 infrastructure 支出可能落在約 200～500 億美元級別。這條敘事若成立，受惠的不只 GPU，也包含 server CPU、memory、SSD 與 enterprise infrastructure。
             </p>
           </section>
 
@@ -263,6 +264,10 @@
             <article class="card metric-card">
               <p class="label">導入 agent 企業數</p>
               <p class="value">50 萬–150 萬家</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">受影響員工數</p>
+              <p class="value">2,000 萬–6,000 萬人</p>
             </article>
             <article class="card metric-card">
               <p class="label">CPU-heavy 設備</p>
@@ -281,8 +286,18 @@
           <section class="grid chart-grid">
             <article class="card chart-card">
               <div class="section-kicker">Chart View</div>
-              <h3>設備數量區間</h3>
+              <h3>公司數 → 員工數 → 設備數</h3>
               <div class="chart-bars">
+                <div class="chart-row">
+                  <div class="chart-label">導入 agent 企業數</div>
+                  <div class="chart-track"><div class="chart-fill company-fill" style="width: 46%"></div></div>
+                  <div class="chart-value">50 萬–150 萬家</div>
+                </div>
+                <div class="chart-row">
+                  <div class="chart-label">受影響員工數</div>
+                  <div class="chart-track"><div class="chart-fill employee-fill" style="width: 68%"></div></div>
+                  <div class="chart-value">2,000 萬–6,000 萬人</div>
+                </div>
                 <div class="chart-row">
                   <div class="chart-label">CPU-heavy 設備</div>
                   <div class="chart-track"><div class="chart-fill cpu-fill" style="width: 78%"></div></div>
@@ -337,6 +352,7 @@
               <h3>估算假設</h3>
               <ul class="bullets">
                 <li>不是全球所有公司都會 agent 化，主要 relevant universe 為知識密集、可流程自動化的企業。</li>
+                <li>若只算中重度受影響員工，平均每家導入企業約對應 40 人左右，因此 50 萬–150 萬家公司 roughly 對應 2,000 萬–6,000 萬人。</li>
                 <li>小型公司以雲端為主，但仍可能補 1–3 台 CPU-heavy machine；中大型公司則逐步增加 hybrid / on-prem 比重。</li>
                 <li>新增 infrastructure 不只支撐模型推理，也支撐 orchestration、retrieval、indexing、log analysis、workflow engine、storage 與內部控制層。</li>
               </ul>
