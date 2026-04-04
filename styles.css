@@ -255,6 +255,10 @@ th, td {
 .recommendation-card {
   background: linear-gradient(135deg, rgba(34,211,238,.10), rgba(18,26,44,.95));
 }
+.note-card {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: linear-gradient(135deg, rgba(245,158,11,.10), rgba(18,26,44,.95));
+}
 .beneficiary-card {
   min-height: 100%;
 }

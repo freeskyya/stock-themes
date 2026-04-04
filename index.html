@@ -511,25 +511,25 @@
           <section class="card executive-summary">
             <div class="section-kicker">Executive Summary</div>
             <h3>核心摘要</h3>
-            <p class="summary">如果未來全球活躍數位人口平均對應 1–3 個 agent，而高頻知識工作者平均對應 2–5 個 agent，則全球的 agent 存量與活躍量都會遠高於傳統 SaaS seat 數。真正影響 infrastructure 的，不是總 agent 數，而是同時在線與持續運行的 agent 數量，這會進一步推升 CPU、memory、storage 與 orchestration 層需求。</p>
+            <p class="summary">若用一個中性 base case 來看，假設全球活躍數位人口約 40 億人、平均每人對應 2 個 agent，則全球 agent 存量約為 80 億個；若其中約 20% 屬於日活躍 agent，則約為 16 億個；若再抓高峰時段約 5% 日活躍 agent 同時在線，則約為 8,000 萬個。真正影響 infrastructure 的，不是總 agent 數，而是這層同時在線與持續運行的 agent 數量，這會進一步推升 CPU、memory、storage 與 orchestration 層需求。</p>
           </section>
 
           <section class="grid metrics">
             <article class="card metric-card">
-              <p class="label">每人平均 agent 數</p>
-              <p class="value">1–3 個</p>
+              <p class="label">活躍數位人口</p>
+              <p class="value">40 億人</p>
             </article>
             <article class="card metric-card">
-              <p class="label">高頻工作人口</p>
-              <p class="value">2–5 個</p>
+              <p class="label">平均 agent / 人</p>
+              <p class="value">2 個</p>
             </article>
             <article class="card metric-card">
-              <p class="label">全球活躍 agent 存量</p>
-              <p class="value">百億級</p>
+              <p class="label">全球 agent 存量</p>
+              <p class="value">80 億個</p>
             </article>
             <article class="card metric-card">
               <p class="label">同時在線 agent</p>
-              <p class="value">億級</p>
+              <p class="value">8,000 萬個</p>
             </article>
           </section>
 
@@ -539,10 +539,11 @@
               <h3>從人口到 agent 的推導</h3>
               <table>
                 <tr><th>層級</th><th>假設</th><th>解讀</th></tr>
-                <tr><td>活躍數位人口</td><td>數十億人</td><td>不是全人類，而是高頻使用智慧型裝置與網路服務的人口</td></tr>
-                <tr><td>平均 agent / 人</td><td>1–3 個</td><td>1 個主 assistant + 功能型 agent 組合</td></tr>
-                <tr><td>全球 agent 存量</td><td>百億級</td><td>帳面上的 agent identity / workflow / assistant 總量</td></tr>
-                <tr><td>同時在線 agent</td><td>億級</td><td>真正吃 infra 的是活躍、持續運行、需要 orchestration 的那一層</td></tr>
+                <tr><td>活躍數位人口</td><td>40 億人</td><td>不是全人類，而是高頻使用智慧型裝置與網路服務的人口</td></tr>
+                <tr><td>平均 agent / 人</td><td>2 個</td><td>1 個主 assistant + 1 個功能型 agent 的中性假設</td></tr>
+                <tr><td>全球 agent 存量</td><td>80 億個</td><td>40 億人 × 2 個 / 人</td></tr>
+                <tr><td>日活躍 agent</td><td>16 億個</td><td>假設約 20% agent 每天會被喚起或執行</td></tr>
+                <tr><td>同時在線 agent</td><td>8,000 萬個</td><td>假設高峰時段約 5% 日活躍 agent 同時在線</td></tr>
               </table>
             </article>
             <article class="card chart-card">
@@ -551,7 +552,7 @@
               <ul class="bullets">
                 <li>很多 agent 是閒置的，像 app 安裝數，不等於實際同時活躍數。</li>
                 <li>真正影響 compute / memory / storage 的，是同時運行中的 agent 與背後 workflow 深度。</li>
-                <li>同時在線 agent 若進入億級，企業與平台端就會開始持續補 CPU-heavy orchestration infrastructure。</li>
+                <li>以 base case 來看，若同時在線 agent 約 8,000 萬個，企業與平台端就會開始持續補 CPU-heavy orchestration infrastructure。</li>
               </ul>
             </article>
           </section>
@@ -561,9 +562,9 @@
               <div class="section-kicker">1. 全球 Agent 數量 TAM</div>
               <h3>全球會有多少 agent？</h3>
               <ul class="bullets">
-                <li>如果一般活躍數位人口平均 1–3 個 agent，這個 TAM 會非常大。</li>
-                <li>真正 agent-native 的工作者、團隊與企業，平均 agent / 人可能明顯高於 3。</li>
-                <li>因此長期來看，全球 agent identity / workflow 總量走向百億級，並不誇張。</li>
+                <li>base case 先抓活躍數位人口 40 億人、平均 2 個 agent / 人，則全球 agent 存量約 80 億個。</li>
+                <li>真正 agent-native 的工作者、團隊與企業，平均 agent / 人可能明顯高於 2。</li>
+                <li>因此長期來看，全球 agent identity / workflow 總量進一步往更高數字走，並不誇張。</li>
               </ul>
             </article>
             <article class="card">
@@ -571,7 +572,7 @@
               <h3>同時在線 agent 才是關鍵</h3>
               <ul class="bullets">
                 <li>總存量像安裝基數；活躍量像 MAU / DAU；同時在線數則更接近 infra 壓力來源。</li>
-                <li>即使百億級 agent 存量中只有小比例持續運作，也可能形成億級同時在線規模。</li>
+                <li>即使 80 億 agent 存量中只有部分持續運作，也可能形成 8,000 萬級的同時在線規模。</li>
                 <li>這是為什麼 orchestration、queue、search、memory、logging 層會先變重要。</li>
               </ul>
             </article>
@@ -586,6 +587,52 @@
               <li><strong>Storage：</strong> 記憶、文件索引、log、artifact、history、backup 都會吃掉大量 storage。</li>
               <li><strong>結論：</strong> 若全球進入 agent-native 社會，最先被拉動的不只 GPU，而是整個 CPU-heavy infrastructure stack。</li>
             </ul>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Base Case Demand Table</div>
+            <h3>全球 Agent Base Case 總需求表</h3>
+            <table>
+              <tr><th>項目</th><th>Base case 假設</th><th>推估結果</th></tr>
+              <tr><td>活躍數位人口</td><td>全球高頻使用數位裝置與網路服務的人口</td><td>40 億人</td></tr>
+              <tr><td>平均 agent / 人</td><td>1 個主 assistant + 1 個功能型 agent</td><td>2 個</td></tr>
+              <tr><td>全球 agent 存量</td><td>40 億 × 2</td><td>80 億個</td></tr>
+              <tr><td>日活躍 agent</td><td>存量的 20%</td><td>16 億個</td></tr>
+              <tr><td>同時在線 agent</td><td>日活躍的 5%</td><td>8,000 萬個</td></tr>
+              <tr><td>CPU 需求</td><td>依輕 / 中 / 重 agent 分層加權</td><td>約 2,360 萬 vCPU</td></tr>
+              <tr><td>RAM 需求</td><td>含 session、cache、runtime overhead</td><td>約 100 PB</td></tr>
+              <tr><td>活躍 working storage</td><td>含 cache、working set、active memory</td><td>約 236 PB</td></tr>
+              <tr><td>日新增資料量</td><td>約 10–100 MB / 日 / 日活躍 agent</td><td>約 16–160 PB / day</td></tr>
+            </table>
+          </section>
+
+          <section class="grid two-col">
+            <article class="card">
+              <div class="section-kicker">Workload Mix</div>
+              <h3>同時在線 agent 的工作負載分層</h3>
+              <table>
+                <tr><th>類型</th><th>占比</th><th>數量</th><th>典型工作</th></tr>
+                <tr><td>輕量 agent</td><td>70%</td><td>5,600 萬個</td><td>查詢、routing、輕型搜尋、簡單 workflow</td></tr>
+                <tr><td>中量 agent</td><td>25%</td><td>2,000 萬個</td><td>多步驟 workflow、文件整理、中度檢索、assistant 工作流</td></tr>
+                <tr><td>重量 agent</td><td>5%</td><td>400 萬個</td><td>長流程、多工具協作、rich context、持續運行型任務</td></tr>
+              </table>
+            </article>
+            <article class="card">
+              <div class="section-kicker">Per-Agent Resource Assumption</div>
+              <h3>每類 agent 的資源假設</h3>
+              <table>
+                <tr><th>類型</th><th>vCPU 等價</th><th>RAM</th><th>Working set</th></tr>
+                <tr><td>輕量 agent</td><td>0.1</td><td>0.5 GB</td><td>1 GB</td></tr>
+                <tr><td>中量 agent</td><td>0.5</td><td>2 GB</td><td>5 GB</td></tr>
+                <tr><td>重量 agent</td><td>2</td><td>8 GB</td><td>20 GB</td></tr>
+              </table>
+            </article>
+          </section>
+
+          <section class="card note-card">
+            <div class="section-kicker">Modeling Note</div>
+            <h3>使用方式</h3>
+            <p class="summary small">這是一個用來推導 infrastructure 壓力的 base case，不是官方精算數字。它的用途是幫你建立量級感：如果 agent adoption 真變成全球性的常態工作流，CPU、memory、storage 的需求很可能先於 GPU training 之外，形成另一條長期的基礎設施需求曲線。</p>
           </section>
         </section>
 
