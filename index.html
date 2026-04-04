@@ -18,9 +18,10 @@
               <span class="toggle-mark">▾</span>
             </button>
             <div class="group-items">
-              <button class="subtheme-btn active" data-theme="agent-cpu-budget">次主題 1：100 人公司預算推估</button>
-              <button class="subtheme-btn" data-theme="global-agent-demand">次主題 2：全球 Infrastructure 需求</button>
-              <button class="subtheme-btn" data-theme="beneficiary-map">次主題 3：受惠鏈比較</button>
+              <button class="subtheme-btn active" data-theme="agent-cpu-budget">次主題 1：單一企業案例（100 人公司）</button>
+              <button class="subtheme-btn" data-theme="global-agent-demand">次主題 2：全球部分企業導入後的 Infrastructure 需求</button>
+              <button class="subtheme-btn" data-theme="beneficiary-map">次主題 3：全球部分企業導入下的受惠鏈比較</button>
+              <button class="subtheme-btn" data-theme="global-agent-tam">次主題 4：全球個人 / 工作者 Agent TAM 與基礎設施反推</button>
             </div>
           </section>
 
@@ -42,7 +43,7 @@
           <header class="hero card">
             <div>
               <p class="eyebrow">Subtheme 01</p>
-              <h2>100 人公司導入 Agent 後，CPU / Server 預算報告</h2>
+              <h2>單一企業案例：100 人公司導入 Agent 後的 CPU / Server 預算</h2>
               <p class="muted">
                 假設一間 100 人的 SoC design house，平均每人約 3 個 agent workflow，估算因此新增的企業基礎設施需求。
               </p>
@@ -241,7 +242,7 @@
           <header class="hero card">
             <div>
               <p class="eyebrow">Subtheme 02</p>
-              <h2>全球企業 Agent 化後，CPU / GPU / Infrastructure 需求估算</h2>
+              <h2>全球部分企業導入 Agent 後，CPU / GPU / Infrastructure 需求估算</h2>
               <p class="muted">
                 用 top-down + bottom-up 的方式，粗估全球公司導入 agent 後，可能新增多少 CPU-heavy 設備、GPU / AI node 與 infrastructure 支出。
               </p>
@@ -405,7 +406,7 @@
           <header class="hero card">
             <div>
               <p class="eyebrow">Subtheme 03</p>
-              <h2>Agent 化趨勢下，AMD / Intel / Memory 受惠鏈比較</h2>
+              <h2>全球部分企業導入 Agent 趨勢下，AMD / Intel / Memory 受惠鏈比較</h2>
               <p class="muted">
                 把企業 agent infrastructure 的受惠鏈拆成 CPU、GPU、memory、storage 與 enterprise infra，看看誰受惠最直接、誰比較像第二層受惠者。
               </p>
@@ -493,6 +494,98 @@
             <p class="summary">
               如果 agent 化變成企業標配，AMD 的優勢在於可以同時吃到 server CPU 與平台敘事；Intel 受惠邏輯則更偏向企業 CPU refresh；而 memory / storage 供應鏈則會因整體機器規格上升而得到更廣、更穩的第二層受惠。
             </p>
+          </section>
+        </section>
+
+        <section id="global-agent-tam" class="theme-panel">
+          <header class="hero card">
+            <div>
+              <p class="eyebrow">Subtheme 04</p>
+              <h2>全球個人 / 工作者 Agent TAM、活躍 Agent 與基礎設施反推</h2>
+              <p class="muted">從「每人平均需要幾個小龍蝦」出發，推到全球 agent 數量、活躍度，並反推可能對 CPU / memory / storage 造成的需求。</p>
+              <p class="update-tag">最後更新：2026-04-04 19:26 CST</p>
+            </div>
+            <div class="hero-badge">Agent TAM View</div>
+          </header>
+
+          <section class="card executive-summary">
+            <div class="section-kicker">Executive Summary</div>
+            <h3>核心摘要</h3>
+            <p class="summary">如果未來全球活躍數位人口平均對應 1–3 個 agent，而高頻知識工作者平均對應 2–5 個 agent，則全球的 agent 存量與活躍量都會遠高於傳統 SaaS seat 數。真正影響 infrastructure 的，不是總 agent 數，而是同時在線與持續運行的 agent 數量，這會進一步推升 CPU、memory、storage 與 orchestration 層需求。</p>
+          </section>
+
+          <section class="grid metrics">
+            <article class="card metric-card">
+              <p class="label">每人平均 agent 數</p>
+              <p class="value">1–3 個</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">高頻工作人口</p>
+              <p class="value">2–5 個</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">全球活躍 agent 存量</p>
+              <p class="value">百億級</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">同時在線 agent</p>
+              <p class="value">億級</p>
+            </article>
+          </section>
+
+          <section class="grid chart-grid">
+            <article class="card chart-card">
+              <div class="section-kicker">TAM Logic</div>
+              <h3>從人口到 agent 的推導</h3>
+              <table>
+                <tr><th>層級</th><th>假設</th><th>解讀</th></tr>
+                <tr><td>活躍數位人口</td><td>數十億人</td><td>不是全人類，而是高頻使用智慧型裝置與網路服務的人口</td></tr>
+                <tr><td>平均 agent / 人</td><td>1–3 個</td><td>1 個主 assistant + 功能型 agent 組合</td></tr>
+                <tr><td>全球 agent 存量</td><td>百億級</td><td>帳面上的 agent identity / workflow / assistant 總量</td></tr>
+                <tr><td>同時在線 agent</td><td>億級</td><td>真正吃 infra 的是活躍、持續運行、需要 orchestration 的那一層</td></tr>
+              </table>
+            </article>
+            <article class="card chart-card">
+              <div class="section-kicker">Infra Interpretation</div>
+              <h3>為什麼不是只看總 agent 數</h3>
+              <ul class="bullets">
+                <li>很多 agent 是閒置的，像 app 安裝數，不等於實際同時活躍數。</li>
+                <li>真正影響 compute / memory / storage 的，是同時運行中的 agent 與背後 workflow 深度。</li>
+                <li>同時在線 agent 若進入億級，企業與平台端就會開始持續補 CPU-heavy orchestration infrastructure。</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="grid two-col assumptions-grid">
+            <article class="card">
+              <div class="section-kicker">1. 全球 Agent 數量 TAM</div>
+              <h3>全球會有多少 agent？</h3>
+              <ul class="bullets">
+                <li>如果一般活躍數位人口平均 1–3 個 agent，這個 TAM 會非常大。</li>
+                <li>真正 agent-native 的工作者、團隊與企業，平均 agent / 人可能明顯高於 3。</li>
+                <li>因此長期來看，全球 agent identity / workflow 總量走向百億級，並不誇張。</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="section-kicker">2. 活躍 vs 同時在線</div>
+              <h3>同時在線 agent 才是關鍵</h3>
+              <ul class="bullets">
+                <li>總存量像安裝基數；活躍量像 MAU / DAU；同時在線數則更接近 infra 壓力來源。</li>
+                <li>即使百億級 agent 存量中只有小比例持續運作，也可能形成億級同時在線規模。</li>
+                <li>這是為什麼 orchestration、queue、search、memory、logging 層會先變重要。</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">3. Infrastructure Reverse-Map</div>
+            <h3>對 CPU / memory / storage 的反推</h3>
+            <ul class="bullets">
+              <li><strong>CPU：</strong> 多數 agent workflow 的第一層需求不是大模型訓練，而是 orchestration、retrieval、ranking、tool execution、workflow control。</li>
+              <li><strong>Memory：</strong> agent session、context window、cache、vector search、並發請求會一起拉高 RAM 需求。</li>
+              <li><strong>Storage：</strong> 記憶、文件索引、log、artifact、history、backup 都會吃掉大量 storage。</li>
+              <li><strong>結論：</strong> 若全球進入 agent-native 社會，最先被拉動的不只 GPU，而是整個 CPU-heavy infrastructure stack。</li>
+            </ul>
           </section>
         </section>
 
