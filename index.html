@@ -9,21 +9,31 @@
   <body>
     <div class="layout">
       <aside class="sidebar">
-        <div>
-          <p class="eyebrow">Main Theme</p>
-          <h1>Agent 對 CPU 的需求評估</h1>
-          <p class="muted">2026 年 4 月主題包。先把主論點立住，再把次主題慢慢擴充。</p>
-        </div>
-        <section class="card main-theme-card">
-          <div class="section-kicker">April 2026 Research Pack</div>
-          <h3>主題：Agent 對 CPU 的需求評估</h3>
-          <p class="summary small">本輪先聚焦 agent adoption 如何拉動 CPU-heavy infrastructure、企業預算、全球設備需求與受惠鏈。</p>
-        </section>
-        <nav class="theme-nav">
-          <div class="nav-group-label">次主題</div>
-          <button class="theme-btn active" data-theme="agent-cpu-budget">次主題 1：100 人公司預算推估</button>
-          <button class="theme-btn" data-theme="global-agent-demand">次主題 2：全球 Infrastructure 需求</button>
-          <button class="theme-btn" data-theme="beneficiary-map">次主題 3：受惠鏈比較</button>
+        <nav class="theme-nav accordion-nav">
+          <div class="nav-group-label">主題</div>
+
+          <section class="theme-group open">
+            <button class="group-toggle" type="button">
+              <span>主題一：Agent 對 CPU 的需求評估（2026 年 4 月）</span>
+              <span class="toggle-mark">▾</span>
+            </button>
+            <div class="group-items">
+              <button class="subtheme-btn active" data-theme="agent-cpu-budget">次主題 1：100 人公司預算推估</button>
+              <button class="subtheme-btn" data-theme="global-agent-demand">次主題 2：全球 Infrastructure 需求</button>
+              <button class="subtheme-btn" data-theme="beneficiary-map">次主題 3：受惠鏈比較</button>
+            </div>
+          </section>
+
+          <section class="theme-group">
+            <button class="group-toggle" type="button">
+              <span>主題二：虛擬主題展示</span>
+              <span class="toggle-mark">▸</span>
+            </button>
+            <div class="group-items">
+              <button class="subtheme-btn" data-theme="dummy-theme-2-sub-1">次主題 1：虛擬需求地圖</button>
+              <button class="subtheme-btn" data-theme="dummy-theme-2-sub-2">次主題 2：虛擬供應鏈觀察</button>
+            </div>
+          </section>
         </nav>
       </aside>
 
@@ -470,6 +480,59 @@
           </section>
         </section>
 
+        <section id="dummy-theme-2-sub-1" class="theme-panel">
+          <header class="hero card">
+            <div>
+              <p class="eyebrow">Subtheme Demo 01</p>
+              <h2>虛擬主題二：次主題一</h2>
+              <p class="muted">這是展示用假資料，單純讓你看「第二個大主題底下再掛次主題」時，網頁大概會長怎樣。</p>
+              <p class="update-tag">最後更新：2026-04-04 19:05 CST</p>
+            </div>
+            <div class="hero-badge">Demo Theme</div>
+          </header>
+
+          <section class="card executive-summary">
+            <div class="section-kicker">Demo Summary</div>
+            <h3>虛擬主題二 / 次主題一</h3>
+            <p class="summary">這裡可以放第二個大主題的第一個次主題內容，例如另一條研究主線、不同產業、不同設備類型，或完全不同時間點的研究包。</p>
+          </section>
+
+          <section class="grid metrics">
+            <article class="card metric-card"><p class="label">假指標 A</p><p class="value">12</p></article>
+            <article class="card metric-card"><p class="label">假指標 B</p><p class="value">48%</p></article>
+            <article class="card metric-card"><p class="label">假指標 C</p><p class="value">US$90B</p></article>
+            <article class="card metric-card"><p class="label">假指標 D</p><p class="value">2027E</p></article>
+          </section>
+        </section>
+
+        <section id="dummy-theme-2-sub-2" class="theme-panel">
+          <header class="hero card">
+            <div>
+              <p class="eyebrow">Subtheme Demo 02</p>
+              <h2>虛擬主題二：次主題二</h2>
+              <p class="muted">這頁也是展示用，目的是讓你看未來如果一個大主題底下有多個次主題，切換起來的感覺。</p>
+              <p class="update-tag">最後更新：2026-04-04 19:05 CST</p>
+            </div>
+            <div class="hero-badge">Demo Theme</div>
+          </header>
+
+          <section class="grid two-col">
+            <article class="card">
+              <div class="section-kicker">Demo Block</div>
+              <h3>假內容區塊 A</h3>
+              <ul class="bullets">
+                <li>這裡未來可以放次主題二的摘要。</li>
+                <li>也可以放一組表格、圖表、比較項。</li>
+                <li>目的是看版型能不能撐住更多主題。</li>
+              </ul>
+            </article>
+            <article class="card recommendation-card">
+              <div class="section-kicker">Demo Block</div>
+              <h3>假內容區塊 B</h3>
+              <p class="summary">如果這種結構你覺得順眼，下一步就可以真的把網站升級成「多個主題包，每個主題包底下有多個次主題」的架構。</p>
+            </article>
+          </section>
+        </section>
       </main>
     </div>
 

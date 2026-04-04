@@ -25,9 +25,6 @@ body {
   border-right: 1px solid var(--border);
   background: rgba(11,16,32,.85);
 }
-.main-theme-card {
-  margin: 18px 0 18px;
-}
 .nav-group-label {
   margin: 8px 0 10px;
   color: #93c5fd;
@@ -87,7 +84,42 @@ body {
   gap: 12px;
   margin-top: 24px;
 }
-.theme-btn {
+.accordion-nav {
+  gap: 14px;
+}
+.theme-group {
+  border: 1px solid var(--border);
+  background: rgba(18, 26, 44, 0.65);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.group-toggle {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+}
+.group-items {
+  display: none;
+  padding: 0 12px 12px;
+}
+.theme-group.open .group-items {
+  display: grid;
+  gap: 10px;
+}
+.theme-group.open .toggle-mark {
+  content: '▾';
+}
+.theme-btn,
+.subtheme-btn {
   text-align: left;
   border: 1px solid var(--border);
   background: var(--panel-2);
@@ -96,7 +128,15 @@ body {
   padding: 14px;
   cursor: pointer;
 }
-.theme-btn.active {
+.subtheme-btn {
+  margin-left: 10px;
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(26,36,58,.75);
+  font-size: 14px;
+}
+.theme-btn.active,
+.subtheme-btn.active {
   border-color: rgba(96,165,250,.6);
   background: rgba(96,165,250,.16);
 }
