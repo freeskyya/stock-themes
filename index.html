@@ -742,7 +742,7 @@
               <p class="eyebrow">Subtheme 06</p>
               <h2>哪些 Agent 需求會留在 edge？哪些會回到 server / cloud？</h2>
               <p class="muted">不是所有 agent 需求都會直接變成 server CPU。這個次主題把常見場景拆成 edge-first、hybrid、server-heavy 三類，幫你判斷需求會落在哪一層。</p>
-              <p class="update-tag">最後更新：2026-04-04 20:04 CST</p>
+              <p class="update-tag">最後更新：2026-04-04 20:49 CST</p>
             </div>
             <div class="hero-badge">Edge vs Server</div>
           </header>
@@ -841,6 +841,48 @@
                 <li><strong>保守：</strong> server fleet 約 25 萬–40 萬台，比較像 base case，下限估法。</li>
                 <li><strong>中性：</strong> server fleet 約 40 萬–80 萬台，比較像 agent 普及後的正常擴張。</li>
                 <li><strong>積極：</strong> server fleet 約 80 萬–150 萬台，代表同時在線率更高、edge 分流沒那麼多、回 server 的高價值 workload 更多。</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Existing Device Absorption</div>
+            <h3>既有裝置吸收效應：為什麼個人 agent 需求不一定等於新增 PC 台數？</h3>
+            <ul class="bullets">
+              <li>全球每年本來就有大量筆電、手機、平板與穿戴裝置出貨，這些既有裝置會先吸收很大一部分個人 agent 需求。</li>
+              <li>因此個人端更合理的敘事，不是「一個人多買一台 device」，而是裝置規格提升、換機週期加速、以及 edge compute 使用率上升。</li>
+              <li>真正比較容易形成新增硬體需求的，通常不是前端 device unit，而是後端的 server、memory、storage 與 supporting infrastructure。</li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Device Layer Map</div>
+            <h3>手機 / 個人筆電 / 伺服器：需求最後落在哪一層？</h3>
+            <table>
+              <tr><th>層級</th><th>最適合承接的需求</th><th>原因</th><th>代表硬體</th></tr>
+              <tr><td>手機端</td><td>提醒、通知整理、位置 / 行程、輕健康監測、語音喚醒、IoT 控制入口</td><td>低延遲、隨身、感測器集中、隱私高、碎片化小任務多</td><td>手機 SoC、edge NPU、手機 RAM、手機快閃儲存</td></tr>
+              <tr><td>個人筆電 / PC</td><td>文件整理、寫作、coding assistant、研究工作流、長文本處理、本地知識庫</td><td>螢幕大、多工強、本地檔案多、適合知識工作長時間操作</td><td>PC CPU / NPU、DRAM、SSD</td></tr>
+              <tr><td>伺服器端</td><td>長期記憶、跨系統 workflow、組織搜尋、大規模客服、批次多媒體處理、共享資料層</td><td>多使用者、高併發、需持久化、需高吞吐與組織級協作</td><td>server CPU、server DRAM、SSD / storage、networking</td></tr>
+            </table>
+          </section>
+
+          <section class="grid two-col assumptions-grid">
+            <article class="card">
+              <div class="section-kicker">Phone-First</div>
+              <h3>哪些需求最像手機端任務？</h3>
+              <ul class="bullets">
+                <li>提醒 / 行程 / 位置通知：因為高度即時、和人當下情境強相關。</li>
+                <li>輕量健康監測：因為感測器資料就在手機與穿戴裝置端。</li>
+                <li>訊息分類 / 輕摘要：很多是小任務、高頻、適合 on-device 先處理。</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="section-kicker">PC-First</div>
+              <h3>哪些需求更像個人筆電任務？</h3>
+              <ul class="bullets">
+                <li>長文件處理、研究整理、報表與 coding assistant，往往在桌面工作流內發生。</li>
+                <li>這類需求雖然可用 server 輔助，但主介面與主操作場景通常仍在筆電 / PC。</li>
+                <li>因此 agent adoption 也可能更多反映成 PC 規格提升與換機節奏，而不只是 server 需求。</li>
               </ul>
             </article>
           </section>
