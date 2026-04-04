@@ -742,7 +742,7 @@
               <p class="eyebrow">Subtheme 06</p>
               <h2>哪些 Agent 需求會留在 edge？哪些會回到 server / cloud？</h2>
               <p class="muted">不是所有 agent 需求都會直接變成 server CPU。這個次主題把常見場景拆成 edge-first、hybrid、server-heavy 三類，幫你判斷需求會落在哪一層。</p>
-              <p class="update-tag">最後更新：2026-04-04 20:49 CST</p>
+              <p class="update-tag">最後更新：2026-04-04 20:59 CST</p>
             </div>
             <div class="hero-badge">Edge vs Server</div>
           </header>
@@ -885,6 +885,21 @@
                 <li>因此 agent adoption 也可能更多反映成 PC 規格提升與換機節奏，而不只是 server 需求。</li>
               </ul>
             </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Server-Resident High-Frequency Demand</div>
+            <h3>哪些高頻需求最後還是會留在 Server 端？</h3>
+            <table>
+              <tr><th>場景</th><th>為什麼留在 server</th><th>高頻程度</th><th>主要壓力</th></tr>
+              <tr><td>組織搜尋 / retrieval / knowledge query</td><td>共享資料層、權限控管、索引更新、多人共用</td><td>非常高</td><td>CPU + memory + index / cache</td></tr>
+              <tr><td>workflow orchestration / tool routing</td><td>跨系統、多步驟、需 background execution 與權限管理</td><td>高</td><td>CPU + queue + state</td></tr>
+              <tr><td>客服 / support</td><td>高併發、需接 ticket / DB / history / SLA</td><td>非常高</td><td>CPU + history + storage</td></tr>
+              <tr><td>logging / memory / history / audit</td><td>需長期保留、同步、可查詢、可審計</td><td>非常高</td><td>storage + memory + indexing</td></tr>
+              <tr><td>共享 agent / shared workspace</td><td>多人共享 context、知識、任務與結果</td><td>高</td><td>memory + storage + coordination</td></tr>
+              <tr><td>文件 / 多媒體批次處理</td><td>吞吐量大、需排隊、需存結果、常跨多人使用</td><td>中高</td><td>CPU / GPU-assisted + storage</td></tr>
+              <tr><td>跨裝置同步 state</td><td>需要 central state、一致性與持久化</td><td>中高</td><td>memory + storage + sync</td></tr>
+            </table>
           </section>
 
           <section class="card">
