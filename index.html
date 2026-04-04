@@ -16,8 +16,8 @@
         </div>
         <nav class="theme-nav">
           <button class="theme-btn active" data-theme="agent-cpu-budget">主題 1：Agent 帶動 CPU / Server 預算</button>
-          <button class="theme-btn" disabled>主題 2：保留</button>
-          <button class="theme-btn" disabled>主題 3：保留</button>
+          <button class="theme-btn" data-theme="global-agent-demand">主題 2：全球 Agent Infrastructure 需求</button>
+          <button class="theme-btn" data-theme="beneficiary-map">主題 3：AMD / Intel / Memory 受惠鏈比較</button>
         </nav>
       </aside>
 
@@ -217,6 +217,247 @@
                 單家公司不誇張，但大量公司一起做，對 CPU 市場就很有感。
               </p>
             </article>
+          </section>
+        </section>
+
+        <section id="global-agent-demand" class="theme-panel">
+          <header class="hero card">
+            <div>
+              <p class="eyebrow">Theme 02</p>
+              <h2>全球企業 Agent 化後，CPU / GPU / Infrastructure 需求估算</h2>
+              <p class="muted">
+                用 top-down + bottom-up 的方式，粗估全球公司導入 agent 後，可能新增多少 CPU-heavy 設備、GPU / AI node 與 infrastructure 支出。
+              </p>
+            </div>
+            <div class="hero-badge">Global TAM View</div>
+          </header>
+
+          <section class="card executive-summary">
+            <div class="section-kicker">Executive Summary</div>
+            <h3>核心摘要</h3>
+            <p class="summary">
+              若未來幾年全球有約 50 萬～150 萬家知識密集型公司逐步導入 agent workflow，則企業新增的 CPU-heavy infrastructure 需求可能達到 100 萬～300 萬台等價設備，
+              GPU / AI node 可能達 10 萬～50 萬台，對應的總體 infrastructure 支出可能落在約 200～500 億美元級別。這條敘事若成立，受惠的不只 GPU，也包含 server CPU、memory、SSD 與 enterprise infrastructure。
+            </p>
+          </section>
+
+          <section class="grid metrics">
+            <article class="card metric-card">
+              <p class="label">導入 agent 企業數</p>
+              <p class="value">50 萬–150 萬家</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">CPU-heavy 設備</p>
+              <p class="value">100 萬–300 萬台</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">GPU / AI node</p>
+              <p class="value">10 萬–50 萬台</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">總 infrastructure 支出</p>
+              <p class="value">約 200–500 億美元</p>
+            </article>
+          </section>
+
+          <section class="grid chart-grid">
+            <article class="card chart-card">
+              <div class="section-kicker">Chart View</div>
+              <h3>設備數量區間</h3>
+              <div class="chart-bars">
+                <div class="chart-row">
+                  <div class="chart-label">CPU-heavy 設備</div>
+                  <div class="chart-track"><div class="chart-fill cpu-fill" style="width: 78%"></div></div>
+                  <div class="chart-value">100 萬–300 萬台</div>
+                </div>
+                <div class="chart-row">
+                  <div class="chart-label">GPU / AI node</div>
+                  <div class="chart-track"><div class="chart-fill gpu-fill" style="width: 34%"></div></div>
+                  <div class="chart-value">10 萬–50 萬台</div>
+                </div>
+              </div>
+            </article>
+            <article class="card chart-card">
+              <div class="section-kicker">Spending Mix</div>
+              <h3>Infrastructure 支出結構</h3>
+              <div class="budget-grid">
+                <div class="budget-item">
+                  <div class="budget-bar" style="width: 42%"></div>
+                  <div class="budget-text">
+                    <strong>CPU-heavy 設備</strong>
+                    <span>最大宗之一</span>
+                  </div>
+                </div>
+                <div class="budget-item">
+                  <div class="budget-bar" style="width: 26%"></div>
+                  <div class="budget-text">
+                    <strong>GPU / AI node</strong>
+                    <span>較少量但單價高</span>
+                  </div>
+                </div>
+                <div class="budget-item">
+                  <div class="budget-bar" style="width: 18%"></div>
+                  <div class="budget-text">
+                    <strong>Storage / memory / networking</strong>
+                    <span>跟著 agent infra 一起上升</span>
+                  </div>
+                </div>
+                <div class="budget-item">
+                  <div class="budget-bar" style="width: 14%"></div>
+                  <div class="budget-text">
+                    <strong>Software / orchestration / ops</strong>
+                    <span>支撐長期運行的控制層</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="grid two-col assumptions-grid">
+            <article class="card">
+              <div class="section-kicker">Model Assumptions</div>
+              <h3>估算假設</h3>
+              <ul class="bullets">
+                <li>不是全球所有公司都會 agent 化，主要 relevant universe 為知識密集、可流程自動化的企業。</li>
+                <li>小型公司以雲端為主，但仍可能補 1–3 台 CPU-heavy machine；中大型公司則逐步增加 hybrid / on-prem 比重。</li>
+                <li>新增 infrastructure 不只支撐模型推理，也支撐 orchestration、retrieval、indexing、log analysis、workflow engine、storage 與內部控制層。</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="section-kicker">Key Interpretation</div>
+              <h3>如何解讀</h3>
+              <ul class="bullets">
+                <li>這不是某家 hyperscaler 的單一大單，而是大量企業同步補 infrastructure 的 aggregate effect。</li>
+                <li>短期 GPU 仍是 AI 主敘事，但 agent 化的企業內部 infrastructure 會讓 CPU / memory / storage 有更結構性的受惠邏輯。</li>
+                <li>真正要看的是 adoption breadth，而不是單一 agent 功能本身有多炫。</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="grid two-col">
+            <article class="card">
+              <h3>設備數量粗估</h3>
+              <table>
+                <tr><th>項目</th><th>區間</th><th>說明</th></tr>
+                <tr><td>CPU-heavy 設備</td><td>100 萬–300 萬台</td><td>server / workstation / orchestration / search / indexing / build 等價設備</td></tr>
+                <tr><td>GPU / AI node</td><td>10 萬–50 萬台</td><td>hybrid / local inference / private AI node</td></tr>
+                <tr><td>Storage / infra 擴充</td><td>大幅增加</td><td>NVMe、NAS、backup、networking、memory 一起被拉動</td></tr>
+              </table>
+            </article>
+            <article class="card">
+              <h3>支出粗估</h3>
+              <table>
+                <tr><th>項目</th><th>估算</th></tr>
+                <tr><td>CPU-heavy 設備平均價值</td><td>約 US$8k–10k / 台</td></tr>
+                <tr><td>GPU / AI node 平均價值</td><td>約 US$25k–30k / 台</td></tr>
+                <tr><td>CPU-heavy 設備總支出</td><td>約 100–300 億美元中的重要部分</td></tr>
+                <tr><td>總 infrastructure 支出</td><td>約 US$200–500 億</td></tr>
+              </table>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Investment Takeaway</div>
+            <h3>投資意義</h3>
+            <ul class="bullets">
+              <li>若 agent adoption 成為企業標配，受惠者將不只局限在 GPU，server CPU、memory、SSD、networking 與 enterprise platform 也會受益。</li>
+              <li>對 AMD 來說，這條邏輯可同時支持 EPYC 與 workstation / enterprise CPU 的長期需求想像。</li>
+              <li>真正值得追的不是單一新聞，而是：企業 agent adoption 的廣度、是否進入 hybrid 部署、以及是否形成持續性 infrastructure refresh cycle。</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="beneficiary-map" class="theme-panel">
+          <header class="hero card">
+            <div>
+              <p class="eyebrow">Theme 03</p>
+              <h2>Agent 化趨勢下，AMD / Intel / Memory 受惠鏈比較</h2>
+              <p class="muted">
+                把企業 agent infrastructure 的受惠鏈拆成 CPU、GPU、memory、storage 與 enterprise infra，看看誰受惠最直接、誰比較像第二層受惠者。
+              </p>
+            </div>
+            <div class="hero-badge">Beneficiary Map</div>
+          </header>
+
+          <section class="card executive-summary">
+            <div class="section-kicker">Executive Summary</div>
+            <h3>核心摘要</h3>
+            <p class="summary">
+              如果企業 agent adoption 成為中長期趨勢，最直接受惠者不只會是 GPU，還包括 server CPU、memory、SSD / storage 與 enterprise infrastructure。對 AMD 而言，受惠點較分散，可同時連接 EPYC、Ryzen Pro / workstation、以及 AI 平台敘事；Intel 則更偏向企業 CPU / enterprise installed base；memory 供應鏈則會隨 server / edge / storage 一起被拉動。
+            </p>
+          </section>
+
+          <section class="grid metrics">
+            <article class="card metric-card">
+              <p class="label">AMD</p>
+              <p class="value">多點受惠</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">Intel</p>
+              <p class="value">CPU / 企業基盤</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">Memory</p>
+              <p class="value">系統性受惠</p>
+            </article>
+            <article class="card metric-card">
+              <p class="label">Storage / Infra</p>
+              <p class="value">第二層受惠</p>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Directness Ranking</div>
+            <h3>受惠直接度比較</h3>
+            <table>
+              <tr><th>類別</th><th>受惠程度</th><th>原因</th></tr>
+              <tr><td>Server CPU</td><td>高</td><td>agent orchestration、retrieval、search、workflow infra、enterprise compute 直接推升需求</td></tr>
+              <tr><td>Memory / DRAM</td><td>高</td><td>每台 server / workstation / AI node 規格提升都會同步拉動記憶體配置</td></tr>
+              <tr><td>Storage / NVMe</td><td>中高</td><td>文件索引、向量資料、log、cache、backup 全都吃 storage</td></tr>
+              <tr><td>GPU / AI node</td><td>中高</td><td>hybrid / local AI adoption 越深，GPU 受惠越強，但不是每家公司都一開始就買</td></tr>
+              <tr><td>Networking / Infra</td><td>中</td><td>隨 server 與 data flow 成長而增加，但通常是第二層受惠</td></tr>
+            </table>
+          </section>
+
+          <section class="grid three-col beneficiary-grid">
+            <article class="card beneficiary-card">
+              <div class="section-kicker">AMD</div>
+              <h3>AMD 受惠點</h3>
+              <ul class="bullets">
+                <li>EPYC：企業 agent infrastructure 若擴張，server CPU 需求是最直接受惠點。</li>
+                <li>Ryzen Pro / workstation：中型公司若用 workstation / edge node 撐 agent workflow，AMD 也有戲。</li>
+                <li>AI 平台敘事：若 hybrid 部署增加，AMD 還能把 CPU + AI / GPU + platform 故事一起講。</li>
+              </ul>
+              <p class="summary small">特點：不是只吃單點，而是 CPU + 平台敘事一起受益。</p>
+            </article>
+            <article class="card beneficiary-card">
+              <div class="section-kicker">Intel</div>
+              <h3>Intel 受惠點</h3>
+              <ul class="bullets">
+                <li>企業 installed base 很深，agent adoption 若發生在既有企業 IT 內，Intel 會先吃到一部分 refresh。</li>
+                <li>CPU-only / conservative deployment 的公司，常更容易先沿著既有 Intel 環境擴。</li>
+                <li>如果市場主敘事是企業 CPU refresh，而不是 pure AI GPU，Intel 也不會缺席。</li>
+              </ul>
+              <p class="summary small">特點：比較像既有 enterprise CPU 基盤的受惠者。</p>
+            </article>
+            <article class="card beneficiary-card">
+              <div class="section-kicker">Memory / Storage</div>
+              <h3>Memory / Storage 受惠點</h3>
+              <ul class="bullets">
+                <li>每新增一台 CPU-heavy node，通常都會拉高 DRAM / NVMe 配置。</li>
+                <li>agent workflow 很吃文件索引、log、cache、vector store，storage 是很實在的需求。</li>
+                <li>這條線不靠單一贏家，屬於「系統性一起受惠」。</li>
+              </ul>
+              <p class="summary small">特點：屬於第二層但很穩的受惠鏈。</p>
+            </article>
+          </section>
+
+          <section class="card">
+            <div class="section-kicker">Bottom Line</div>
+            <h3>一句結論</h3>
+            <p class="summary">
+              如果 agent 化變成企業標配，AMD 的優勢在於可以同時吃到 server CPU 與平台敘事；Intel 受惠邏輯則更偏向企業 CPU refresh；而 memory / storage 供應鏈則會因整體機器規格上升而得到更廣、更穩的第二層受惠。
+            </p>
           </section>
         </section>
       </main>
