@@ -10,14 +10,20 @@
     <div class="layout">
       <aside class="sidebar">
         <div>
-          <p class="eyebrow">Theme Board</p>
-          <h1>股票主題分析</h1>
-          <p class="muted">先做可讀、可擴充，少裝神，先把邏輯講清楚。</p>
+          <p class="eyebrow">Main Theme</p>
+          <h1>Agent 對 CPU 的需求評估</h1>
+          <p class="muted">2026 年 4 月主題包。先把主論點立住，再把次主題慢慢擴充。</p>
         </div>
+        <section class="card main-theme-card">
+          <div class="section-kicker">April 2026 Research Pack</div>
+          <h3>主題：Agent 對 CPU 的需求評估</h3>
+          <p class="summary small">本輪先聚焦 agent adoption 如何拉動 CPU-heavy infrastructure、企業預算、全球設備需求與受惠鏈。</p>
+        </section>
         <nav class="theme-nav">
-          <button class="theme-btn active" data-theme="agent-cpu-budget">主題 1：Agent 帶動 CPU / Server 預算</button>
-          <button class="theme-btn" data-theme="global-agent-demand">主題 2：全球 Agent Infrastructure 需求</button>
-          <button class="theme-btn" data-theme="beneficiary-map">主題 3：AMD / Intel / Memory 受惠鏈比較</button>
+          <div class="nav-group-label">次主題</div>
+          <button class="theme-btn active" data-theme="agent-cpu-budget">次主題 1：100 人公司預算推估</button>
+          <button class="theme-btn" data-theme="global-agent-demand">次主題 2：全球 Infrastructure 需求</button>
+          <button class="theme-btn" data-theme="beneficiary-map">次主題 3：受惠鏈比較</button>
         </nav>
       </aside>
 
@@ -25,7 +31,7 @@
         <section id="agent-cpu-budget" class="theme-panel active">
           <header class="hero card">
             <div>
-              <p class="eyebrow">Theme 01</p>
+              <p class="eyebrow">Subtheme 01</p>
               <h2>100 人公司導入 Agent 後，CPU / Server 預算報告</h2>
               <p class="muted">
                 假設一間 100 人的 SoC design house，平均每人約 3 個 agent workflow，估算因此新增的企業基礎設施需求。
@@ -224,7 +230,7 @@
         <section id="global-agent-demand" class="theme-panel">
           <header class="hero card">
             <div>
-              <p class="eyebrow">Theme 02</p>
+              <p class="eyebrow">Subtheme 02</p>
               <h2>全球企業 Agent 化後，CPU / GPU / Infrastructure 需求估算</h2>
               <p class="muted">
                 用 top-down + bottom-up 的方式，粗估全球公司導入 agent 後，可能新增多少 CPU-heavy 設備、GPU / AI node 與 infrastructure 支出。
@@ -372,7 +378,7 @@
         <section id="beneficiary-map" class="theme-panel">
           <header class="hero card">
             <div>
-              <p class="eyebrow">Theme 03</p>
+              <p class="eyebrow">Subtheme 03</p>
               <h2>Agent 化趨勢下，AMD / Intel / Memory 受惠鏈比較</h2>
               <p class="muted">
                 把企業 agent infrastructure 的受惠鏈拆成 CPU、GPU、memory、storage 與 enterprise infra，看看誰受惠最直接、誰比較像第二層受惠者。
